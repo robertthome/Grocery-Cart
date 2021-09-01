@@ -9,15 +9,13 @@ const main = async () => {
       name: 'apple',
       image:
         'https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXBwbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
-      price: '1.50',
-      foodId: item1_id
+      price: '1.50'
     },
     {
       name: 'bread',
       image:
         'https://images.unsplash.com/photo-1598373182308-3270495d2f58?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODR8fGJyZWFkfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-      price: '2.50',
-      foodId: item1_id
+      price: '2.50'
     }
   ]
   await Food.insertMany(foods)
