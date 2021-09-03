@@ -18,6 +18,11 @@ function App() {
       let res = await axios.get(`${BASE_URL}/foods`)
       setFood(res.data.foods)
     }
+    async function getStores() {
+      let res = await axios.get(`${BASE_URL}/store`)
+      setStores(res.data.stores)
+    }
+    getStores()
     getFood()
     return <div></div>
   }, [])

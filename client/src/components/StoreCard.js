@@ -4,8 +4,8 @@ function StoreCard(props) {
   const { store } = props
   return (
     <div className="store-card">
-      <h3>{store.name}</h3>
-      <img src={store.image} alt={store.name} />
+      <h3>{props.store.name}</h3>
+      <img src={props.store.image} alt={props.store.name} />
     </div>
   )
 }
