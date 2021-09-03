@@ -57,7 +57,7 @@ h1 {
 
 h3 {
   font-size: 25px;
-  margin: 15px 50px;
+  margin: 40px 50px;
   font-family: 'Racing Sans One', cursive;
 }
 
@@ -179,4 +179,16 @@ button {
   font-weight: bold;
   cursor: pointer;
   margin-top: 1em;
+}
+
+.food-card {
+  display: flex;
+  background-color: rgb(170, 61, 61);
+  color: white;
+}
+
+img {
+  margin-top: 10px;
+  height: 100px;
+  width: 150px;
 }
