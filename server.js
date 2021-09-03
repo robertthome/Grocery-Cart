@@ -16,10 +16,6 @@ app.use(logger('dev'))
 app.use('/api', routes)
 app.use(express.urlencoded({ extended: false }))
 
-app.get('/', (req, res) => {
-  res.send('This is root')
-})
-
 app.get('/api/foods', async (req, res) => {
   const foods = await Food.find()
   res.json(foods)
