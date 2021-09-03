@@ -11,7 +11,7 @@ function FoodCard(props) {
     <div className="food-card">
       <h3>{food.name}</h3>
       <img src={food.image} alt={food.name} />
-      <p>Price: {food.price}</p>
+      <p className="price">Price: {food.price}</p>
       <button value="delete" onClick={deleteFood}>
         Delete Item
       </button>

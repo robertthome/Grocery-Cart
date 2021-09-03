@@ -5,13 +5,13 @@ import { Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
 import { BASE_URL } from './globle'
 import axios from 'axios'
-import FoodCard from './components/FoodCard'
 import FoodList from './components/foodList'
 import StoreList from './components/storeList'
+import FoodCardOne from './components/OriginalFoodCard'
 
 function App() {
   const [food, setFood] = useState([])
-  const [stores, setStores] = useState([])
+  const [stores, setStores] = useState({})
 
   useEffect(() => {
     async function getFood() {
@@ -19,15 +19,6 @@ function App() {
       setFood(res.data.foods)
     }
     getFood()
-    return <div></div>
-  }, [])
-
-  useEffect(() => {
-    async function getStores() {
-      let res = await axios.get(`${BASE_URL}/stores`)
-      setStores(res.data.stores)
-    }
-    getStores()
     return <div></div>
   }, [])
 
@@ -46,6 +37,12 @@ function App() {
         />
         <Route
           path="/food"
+          component={(routerProps) => (
+            <FoodCardOne {...routerProps} food={food} />
+          )}
+        />
+        <Route
+          path="/checkout"
           component={(routerProps) => <FoodList {...routerProps} food={food} />}
         />
       </Switch>
