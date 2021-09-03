@@ -7,7 +7,6 @@ function FoodCard(props) {
   async function deleteFood() {
     let res = await axios.delete(`${BASE_URL}/delete/${food._id}`)
   }
-
   return (
     <div className="food-card">
       <h3>{food.name}</h3>

@@ -1,10 +1,9 @@
 import React from 'react'
 import axios from 'axios'
-import { BASE_URL } from '../globle'
 import StoreCard from './StoreCard'
 
 export default function StoreList(props) {
-  const allStores = props.store
+  let allStores = props.stores
   return (
     <div>
       {allStores.map((store) => (
@@ -12,6 +11,4 @@ export default function StoreList(props) {
       ))}
     </div>
   )
-
-  // return <div className="food-list">{foodListings}</div>
 }

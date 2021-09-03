@@ -11,13 +11,7 @@ import StoreList from './components/storeList'
 
 function App() {
   const [food, setFood] = useState([])
-  const [stores, setStores] = useState({
-    id: '',
-    name: '',
-    img: '',
-    description: '',
-    price: ''
-  })
+  const [stores, setStores] = useState([])
 
   useEffect(() => {
     async function getFood() {
@@ -28,6 +22,15 @@ function App() {
     return <div></div>
   }, [])
 
+  useEffect(() => {
+    async function getStores() {
+      let res = await axios.get(`${BASE_URL}/stores`)
+      setStores(res.data.stores)
+    }
+    getStores()
+    return <div></div>
+  }, [])
+
   return (
     <div className="App black">
       <header className="App-header">
@@ -35,12 +38,12 @@ function App() {
       </header>
       <Switch>
         <Route exact path="/" component={Home} />
-        {/* <Route
-          path="/store"
+        <Route
+          path="/stores"
           component={(routerProps) => (
-            <StoreList {...routerProps} store={store} />
+            <StoreList {...routerProps} stores={stores} />
           )}
-        /> */}
+        />
         <Route
           path="/food"
           component={(routerProps) => <FoodList {...routerProps} food={food} />}
