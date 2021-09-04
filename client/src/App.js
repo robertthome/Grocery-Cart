@@ -7,7 +7,6 @@ import { BASE_URL } from './globle'
 import axios from 'axios'
 import FoodList from './components/foodList'
 import StoreList from './components/storeList'
-import FoodCardOne from './components/OriginalFoodCard'
 
 function App() {
   const [food, setFood] = useState([])
@@ -38,12 +37,6 @@ function App() {
           path="/stores"
           component={(routerProps) => (
             <StoreList {...routerProps} stores={stores} />
-          )}
-        />
-        <Route
-          path="/food"
-          component={(routerProps) => (
-            <FoodCardOne {...routerProps} food={food} />
           )}
         />
         <Route

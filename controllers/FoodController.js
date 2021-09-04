@@ -11,7 +11,7 @@ const getStore = async (req, res) => {
 
 const createStore = async (req, res) => {
   try {
-    const store = await new Store.post(req.body)
+    const store = await new Store(req.body)
     await store.save()
     return res.status(201).json({
       store

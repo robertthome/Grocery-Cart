@@ -6,9 +6,9 @@ router.get('/', (req, res) => res.send('hey they hi there ho there'))
 
 router.get('/foods', controllers.getAllFood)
 
-router.get('/store', controllers.getStore)
+router.get('/store', controllers.getAllStores)
 
-router.post('/astore', controllers.getStore)
+router.post('/astore', controllers.createStore)
 
 router.post('/afood', controllers.createFood)
 
