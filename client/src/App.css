@@ -71,9 +71,18 @@ h3 {
   background-color: rgb(212, 1, 18);
 }
 
-.store-display {
-  display: flex;
-  background-color: orange;
+.store-card {
+  padding: 1em;
+  width: 250px;
+  height: 250px;
+
+  margin: 30px -60px;
+  margin-left: 200px;
+  justify-content: space-around;
+
+  color: white;
+  font-family: 'Georgia';
+  cursor: pointer;
 }
 
 button {

@@ -6,7 +6,7 @@ export default function StoreList(props) {
   return (
     <div>
       {props.stores ? (
-        <div>
+        <div className="listings">
           {props.stores.map((store) => (
             <StoreCard key={`${store._id}`} store={store} />
           ))}
