@@ -75,11 +75,9 @@ h3 {
   padding: 1em;
   width: 250px;
   height: 250px;
-
   margin: 30px -60px;
   margin-left: 200px;
   justify-content: space-around;
-
   color: white;
   font-family: 'Georgia';
   cursor: pointer;
@@ -98,11 +96,9 @@ button {
   padding: 1em;
   width: 250px;
   height: 250px;
-
   margin: 30px -60px;
   margin-left: 200px;
   justify-content: space-around;
-
   color: white;
   font-family: 'Georgia';
   cursor: pointer;
